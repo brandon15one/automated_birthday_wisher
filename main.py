@@ -16,11 +16,3 @@ def new_quote():
         return quote
 
 
-if day == 0:
-    with smtplib.SMTP("smtp.gmail.com") as connection:
-        connection.starttls()
-        connection.login(user=my_email, password=password)
-        connection.sendmail(
-            from_addr=my_email,
-            to_addrs="1@yahoo.com",
-            msg=f"Subject: MONDAY MOTIVATION \n\n{new_quote()}")
